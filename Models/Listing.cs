@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -26,5 +27,9 @@ namespace Marquette_Mansions.Models
         [ForeignKey("Tennant")]
         public int? TennantID { get; set; }
         public Tennant Tennant { get; set; }
+    }
+    public class ListingDBContext : DbContext
+    {
+        public DbSet<Listing> Listings { get; set; }
     }
 }

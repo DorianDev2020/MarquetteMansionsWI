@@ -4,14 +4,16 @@ using Marquette_Mansions.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Marquette_Mansions.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200327161839_models complete")]
+    partial class modelscomplete
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -48,8 +50,8 @@ namespace Marquette_Mansions.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "b3fb62b7-2630-4ec0-86da-8a1ab2ee5776",
-                            ConcurrencyStamp = "97c06115-b86e-40c9-9a9b-7ff1e6869ffa",
+                            Id = "254f4c37-3ea5-478d-88a1-8f097396cd6c",
+                            ConcurrencyStamp = "ffcb5b76-0b18-4035-9031-7c5225cf523f",
                             Name = "Admin",
                             NormalizedName = "Admin"
                         });

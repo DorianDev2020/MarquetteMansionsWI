@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -21,5 +22,9 @@ namespace Marquette_Mansions.Models
         public string State { get; set; }
         public string City { get; set; }
         public string PhoneNumber { get; set; }
+    }
+    public class TennantDBContext : DbContext
+    {
+        public DbSet<Tennant> Tennants { get; set; }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -21,5 +22,9 @@ namespace Marquette_Mansions.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int PhoneNumber { get; set; }
+    }
+    public class ManagerDBContext : DbContext
+    {
+        public DbSet<Manager> Managers { get; set; }
     }
 }
