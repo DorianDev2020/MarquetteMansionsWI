@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Marquette_Mansions.Models
 {
+   
     public class WorkOrder
     {
         [Key]
@@ -17,8 +18,5 @@ namespace Marquette_Mansions.Models
         [Display(Name = "Work Order Request")]
         public string MaintenanceOrder { get; set; }
     }
-    public class WorkOrderDBContext : DbContext
-    {
-        public DbSet<WorkOrder> WorkOrders{ get; set; }
-    }
+   
 }

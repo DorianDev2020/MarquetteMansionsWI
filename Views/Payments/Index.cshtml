@@ -1,0 +1,35 @@
+﻿@model Stripe.Checkout.Session
+@{
+    ViewBag.Title = "Payment page";
+}
+
+<script src="https://js.stripe.com/v3/"></script>
+<br />
+<br />
+
+
+
+<button class="btn btn-info" id="btnPay">
+    Pay Here
+</button>
+<script>
+    var stripe = Stripe('pk_test_t4cnuv6R1FhTopNHjdxihxzy00uVaKdkZf');
+
+    var element = document.getElementById('btnPay');
+    element.addEventListener('click', function () {
+         stripe.redirectToCheckout({
+        // Make the id field from the Checkout Session creation API response
+        // available to this file, so you can provide it as parameter here
+        // instead of the {{CHECKOUT_SESSION_ID}} placeholder.
+        sessionId: '@Model.Id'
+        }).then(function (result) {
+            // If `redirectToCheckout` fails due to a browser or network
+            // error, display the localized error message to your customer
+            // using `result.error.message`.
+        });
+    });
+
+
+</script>
+
+

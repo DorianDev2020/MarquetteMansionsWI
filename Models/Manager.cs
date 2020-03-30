@@ -23,8 +23,5 @@ namespace Marquette_Mansions.Models
         public string LastName { get; set; }
         public int PhoneNumber { get; set; }
     }
-    public class ManagerDBContext : DbContext
-    {
-        public DbSet<Manager> Managers { get; set; }
-    }
+    
 }

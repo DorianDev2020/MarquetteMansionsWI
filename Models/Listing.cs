@@ -28,8 +28,4 @@ namespace Marquette_Mansions.Models
         public int? TennantID { get; set; }
         public Tennant Tennant { get; set; }
     }
-    public class ListingDBContext : DbContext
-    {
-        public DbSet<Listing> Listings { get; set; }
-    }
 }

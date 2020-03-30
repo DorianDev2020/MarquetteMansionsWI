@@ -23,8 +23,5 @@ namespace Marquette_Mansions.Models
         public string City { get; set; }
         public string PhoneNumber { get; set; }
     }
-    public class TennantDBContext : DbContext
-    {
-        public DbSet<Tennant> Tennants { get; set; }
-    }
+    
 }

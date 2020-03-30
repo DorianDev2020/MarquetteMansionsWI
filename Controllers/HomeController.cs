@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Marquette_Mansions.Models;
+using Stripe;
+using Stripe.Checkout;
 
 namespace Marquette_Mansions.Controllers
 {
@@ -20,6 +22,7 @@ namespace Marquette_Mansions.Controllers
 
         public IActionResult Index()
         {
+            
             return View();
         }
 
